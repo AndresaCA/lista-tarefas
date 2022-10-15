@@ -1,10 +1,12 @@
-let id = 0 // id setado como nulo
+let id = 0 // id setada como nula de inicio
 
 // Forma reduzida usando template string
 const tarefa = (id) => `<div id='${id}'>
 <p>Tarefa<p/>
 <input type= "checkbox"/>
 </div>`
+
+const tarefaCriada = document.getElementById('NewTask')
 
 function addTarefa () {
     id ++ // vai adicionando mais ids
