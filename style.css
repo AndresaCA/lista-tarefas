@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+body {
+    background: linear-gradient(90deg, hsla(346, 42%, 86%, 1) 0%, hsla(353, 43%, 78%, 1) 25%, hsla(324, 50%, 74%, 1) 50%, hsla(312, 23%, 62%, 1) 75%, hsla(306, 12%, 45%, 1) 100%);
+}
+
+#container {
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#lista-tarefas p {
+    color: #B486AB;
+    margin-left: 8px;
+    font-size: 1rem;
+}
+
+h1 {
+    color: #B486AB;
+    font-size: 2rem;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#caixaTarefa {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px ;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#caixaTarefa button {
+    background: none;
+    color: #B486AB;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#caixaTarefa input {
+    border: 2px solid #B486AB;
+    font-size: 1rem;
+    background: none;
+    width: 95%;
+    height: 35px;
+    padding: 15px;
+}
+
+input[type='checkbox'] {
+    accent-color: #B486AB;
+}
+
+::placeholder {
+    color: #EACBD2;
+}
+
+div:has(input) {
+    display: flex;
+    flex-direction: row;
+}
