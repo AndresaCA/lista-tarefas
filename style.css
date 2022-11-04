@@ -1,83 +1,117 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
+    color: #EBEBEB;
+    font-weight: 300;
+    outline: none;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    background: linear-gradient(90deg, hsla(346, 42%, 86%, 1) 0%, hsla(353, 43%, 78%, 1) 25%, hsla(324, 50%, 74%, 1) 50%, hsla(312, 23%, 62%, 1) 75%, hsla(306, 12%, 45%, 1) 100%);
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #container {
-    background-color: rgb(248, 248, 248);
+    background-color: #0C0C0C;
     border-radius: 10px;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 10px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    width: 30em;
+    padding: 20px;
+    box-shadow: -1px  1px 5px #09090B;
 }
 
-#lista-tarefas {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+#parteCima {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#parteCima h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCBFC8;
+    margin-bottom: 20px;
+}
+
+#parteCima input {
+    background-color: #0B0B0B;
+    border: 1px solid #A62639;
+    border-radius: 5px;
+    width: 20em;
+    height: 37px;
+    margin-bottom: 0.9em;
+}
+
+#nome-tarefa {
     padding: 10px;
-    margin-top: 20px;
-}
-
-#lista-tarefas p {
-    color: #B486AB;
-    margin-left: 8px;
-    font-size: 1rem;
-}
-
-h1 {
-    color: #B486AB;
-    font-size: 2rem;
-    padding: 10px;
-    margin-bottom: 5px;
-}
-
-#caixaTarefa {
-    display: flex;
-    flex-direction: row;
-    padding: 0px 10px ;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#caixaTarefa button {
-    background: none;
-    color: #B486AB;
-    border: none;
-    border-radius: 50%;
-    font-size: 25px;
-    margin-left: 10px;
-}
-
-#caixaTarefa input {
-    border: 2px solid #B486AB;
-    font-size: 1rem;
-    background: none;
-    width: 95%;
-    height: 35px;
-    padding: 15px;
-}
-
-input[type='checkbox'] {
-    accent-color: #B486AB;
 }
 
 ::placeholder {
-    color: #EACBD2;
+    color: #BCBFC8;
 }
 
-div:has(input) {
+#parteCima button {
+    background-color: #A62639;
+    color: white;
+    font-size: 0.8rem;
+    border: 1px solid #A62639;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#parteCima button:hover {
+    background-color: #AE3A4B;
+    color: white;
+    border: 1px solid #AE3A4B;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#lista-tarefas div{
+    width: 26em;
+    padding: 10px 20px;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+#lista-tarefas span {
+    display: flex;
+}
+
+#lista-tarefas button {
+    background: none;
+    color: #AE3A4B;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+#lista-tarefas button:hover {
+    background: none;
+    border: none;
+    color: #A62639;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+#lista-tarefas p {
+    margin-left: 10px;
+    color: #7A8094;
+    font-size: 1rem;
 }

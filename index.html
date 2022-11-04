@@ -5,22 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
     <title>Lista de tarefas</title>
 </head>
 <body>
     <div id="container">
-
-        <h1>Lista de tarefas</h1>
-
-        <div id="caixaTarefa">
-            <input type="text" id="nome-tarefa" placeholder="Item da lista"/>
+        <div id="parteCima">
+            <h1>Minha lista de Tarefas</h1>
+            <input type="text" id="nome-tarefa" placeholder="Adicione uma tarefa"/>
             <span class="checkmark"></span>
-            <button onclick="adicionarTarefa()">+</button>
+            <button onclick="adicionarTarefa()" id="btnAdd">ADICIONAR</i></button>
         </div>
-
         <div id="lista-tarefas">
-        </div>
-        
+        </div>  
     </div>
 
     <script src="./index.js"></script>
