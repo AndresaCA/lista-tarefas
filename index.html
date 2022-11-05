@@ -11,13 +11,32 @@
     <title>Lista de tarefas</title>
 </head>
 <body>
+    <form class="escolha-tema">
+        <fieldset>
+            <legend class="conteudo-oculto">Escolha o tema</legend>
+
+            <label for="azul" class="conteudo-oculto">Azul</label>
+            <input type="radio" name="tema" id="azul" checked>
+
+            <label for="rosa" class="conteudo-oculto">Rosa</label>
+            <input type="radio" name="tema" id="rosa">
+
+            <label for="verde" class="conteudo-oculto">Verde</label>
+            <input type="radio" name="tema" id="verde">
+
+            <label for="amarelo" class="conteudo-oculto">Amarelo</label>
+            <input type="radio" name="tema" id="amarelo">
+        </fieldset>
+    </form>
+
     <div id="container">
         <div id="parteCima">
             <h1>Minha lista de Tarefas</h1>
-            <input type="text" id="nome-tarefa" placeholder="Adicione uma tarefa"/>
+            <input type="text" id="nome-tarefa" placeholder="Adicione uma tarefa" onkeypress="adicionarTarefaEnter(event)"/>
             <span class="checkmark"></span>
             <button onclick="adicionarTarefa()" id="btnAdd">ADICIONAR</i></button>
         </div>
+
         <div id="lista-tarefas">
         </div>  
     </div>

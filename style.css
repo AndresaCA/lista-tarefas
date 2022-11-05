@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -30,6 +28,9 @@ body {
     width: 30em;
     padding: 20px;
     box-shadow: -1px  1px 5px #09090B;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 40px;
 }
 
 #parteCima {
@@ -46,7 +47,7 @@ body {
 
 #parteCima input {
     background-color: #0B0B0B;
-    border: 1px solid #A62639;
+    border: 1px solid var(--clr-border);
     border-radius: 5px;
     width: 20em;
     height: 37px;
@@ -62,21 +63,13 @@ body {
 }
 
 #parteCima button {
-    background-color: #A62639;
-    color: white;
+    background: var(--clr-body-bg);
+    color: var(--clr-font);
     font-size: 0.8rem;
-    border: 1px solid #A62639;
+    font-weight: 900;
+    border: 1px solid var(--clr-border);
     border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#parteCima button:hover {
-    background-color: #AE3A4B;
-    color: white;
-    border: 1px solid #AE3A4B;
-    border-radius: 5px;
-    padding: 10px;
+    padding: 9px;
     cursor: pointer;
 }
 
@@ -95,16 +88,7 @@ body {
 
 #lista-tarefas button {
     background: none;
-    color: #AE3A4B;
-    font-size: 0.8rem;
-    border: none;
-    cursor: pointer;
-}
-
-#lista-tarefas button:hover {
-    background: none;
-    border: none;
-    color: #A62639;
+    color: var(--clr-text);
     font-size: 0.8rem;
     border: none;
     cursor: pointer;
@@ -114,4 +98,80 @@ body {
     margin-left: 10px;
     color: #7A8094;
     font-size: 1rem;
+}
+
+.conteudo-oculto {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.escolha-tema > fieldset {
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background: #000;
+    padding: 1rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.escolha-tema input[type="radio"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.escolha-tema input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+
+.escolha-tema input[type="radio"]#azul {
+    --radio-color: #1AC8ED;
+}
+
+.escolha-tema input[type="radio"]#rosa {
+    --radio-color: #E63946;
+}
+
+.escolha-tema input[type="radio"]#verde {
+    --radio-color: green;
+}
+
+.escolha-tema input[type="radio"]#amarelo {
+    --radio-color: #FCA311;
+}
+
+:root:has(#rosa:checked) {
+    --clr-body-bg: #E63946;
+    --clr-text: #E63946;
+    --clr-border: #E63946;
+}
+
+:root:has(#azul:checked) {
+    --clr-body: ;
+    --clr-body-bg: #1AC8ED;
+    --clr-text: #1AC8ED;
+    --clr-border: #1AC8ED;
+}
+
+:root:has(#verde:checked) {
+    --clr-body-bg: #317B22;
+    --clr-text: #317B22;
+    --clr-border: #317B22;
+}
+
+:root:has(#amarelo:checked) {
+    --clr-body-bg: #FCA311;
+    --clr-text: #FCA311;
+    --clr-border: #FCA311;
+    --clr-font: #000
 }
