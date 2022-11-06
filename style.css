@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #1A1A1A;
+    background-color: var(--clr-body-bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,16 +42,17 @@ body {
     font-size: 2em;
     font-weight: 700;
     color: #BCBFC8;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #parteCima input {
     background-color: #0B0B0B;
     border: 1px solid var(--clr-border);
     border-radius: 5px;
-    width: 24em;
+    font-size: 1rem;
+    width: 20em;
     height: 37px;
-    margin-bottom: 0.9em;
+    margin-bottom: 0px;
 }
 
 #nome-tarefa {
@@ -63,19 +64,26 @@ body {
 }
 
 #parteCima button {
-    background: var(--clr-body-bg);
-    color: var(--clr-font);
+    background: var(--clr-bg);
+    color: white;
+    border: 1px solid var(--clr-border-btn);
     font-size: 0.8rem;
-    font-weight: 900;
-    border: 1px solid var(--clr-border);
+    font-weight: 500;
+    height: 37px;
     border-radius: 5px;
-    padding: 9px;
+    padding: 0.6rem;
     cursor: pointer;
 }
 
+#lista-tarefas {
+    margin: 10px 0;
+}
+
 #lista-tarefas div{
+    background-color: rgb(15, 15, 15);
     padding: 10px 15px;
     display: flex;
+    margin-bottom: 5px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -87,7 +95,8 @@ body {
 #lista-tarefas button {
     background: none;
     color: var(--clr-text);
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: 900;
     border: none;
     cursor: pointer;
 }
@@ -120,8 +129,8 @@ body {
 
 .escolha-tema input[type="radio"] {
     appearance: none;
-    width: 1rem;
-    height: 1rem;
+    width: 0.5rem;
+    height: 0.5rem;
     outline: 3px solid var(--radio-color, currentColor);
     outline-offset: 3px;
     border-radius: 50%;
@@ -132,44 +141,50 @@ body {
     background-color: var(--radio-color);
 }
 
-.escolha-tema input[type="radio"]#azul {
-    --radio-color: #1AC8ED;
+.escolha-tema input[type="radio"]#rosa {
+    --radio-color: #661436;
 }
 
-.escolha-tema input[type="radio"]#rosa {
-    --radio-color: #E63946;
+.escolha-tema input[type="radio"]#azul {
+    --radio-color: #114D7E;
 }
 
 .escolha-tema input[type="radio"]#verde {
-    --radio-color: #317B22;
+    --radio-color: #2E4D3A;
 }
 
 .escolha-tema input[type="radio"]#amarelo {
-    --radio-color: #FCA311;
+    --radio-color: #E4572E;
 }
 
 :root:has(#rosa:checked) {
-    --clr-body-bg: #E63946;
-    --clr-text: #E63946;
-    --clr-border: #E63946;
+    --clr-body-bg: #330A1B;
+    --clr-bg: #661436;
+    --clr-text: #661436;
+    --clr-border-btn: #661436;
+    --clr-border: #3a3a3a;
 }
 
 :root:has(#azul:checked) {
-    --clr-body: ;
-    --clr-body-bg: #1AC8ED;
-    --clr-text: #1AC8ED;
-    --clr-border: #1AC8ED;
+    --clr-body-bg: #072136;
+    --clr-bg: #114D7E;
+    --clr-text: #114D7E;
+    --clr-border-btn: #114D7E;
+    --clr-border: #3a3a3a;
 }
 
 :root:has(#verde:checked) {
-    --clr-body-bg: #317B22;
-    --clr-text: #317B22;
-    --clr-border: #317B22;
+    --clr-body-bg: #17261C;
+    --clr-bg: #2E4D3A;
+    --clr-text: #2E4D3A;
+    --clr-border-btn: #2E4D3A;
+    --clr-border: #3a3a3a;
 }
 
 :root:has(#amarelo:checked) {
-    --clr-body-bg: #FCA311;
-    --clr-text: #FCA311;
-    --clr-border: #FCA311;
-    --clr-font: #000
+    --clr-body-bg: #7E2A10;
+    --clr-bg: #E4572E;
+    --clr-text: #E4572E;
+    --clr-border-btn: #E4572E;
+    --clr-border: #3a3a3a;
 }

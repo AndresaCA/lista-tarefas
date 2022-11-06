@@ -30,7 +30,7 @@ const tarefa = (id, novaTarefa) => `<div>
 <input type="checkbox" onchange="marcarTarefa(${id})"/>
 <p id='${id}'>${novaTarefa}</p>
 </span>
-<button onclick="removerTarefa(${id})">REMOVER</button>
+<button onclick="removerTarefa(${id})">x</button>
 </div>`
 
 const marcarTarefa = (id) => {
