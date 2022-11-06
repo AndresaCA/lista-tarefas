@@ -35,7 +35,7 @@ body {
 
 #parteCima {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0px;
 }
 
 #parteCima h1 {
@@ -49,7 +49,7 @@ body {
     background-color: #0B0B0B;
     border: 1px solid var(--clr-border);
     border-radius: 5px;
-    width: 20em;
+    width: 24em;
     height: 37px;
     margin-bottom: 0.9em;
 }
@@ -74,9 +74,7 @@ body {
 }
 
 #lista-tarefas div{
-    width: 26em;
-    padding: 10px 20px;
-    margin-top: 5px;
+    padding: 10px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -143,7 +141,7 @@ body {
 }
 
 .escolha-tema input[type="radio"]#verde {
-    --radio-color: green;
+    --radio-color: #317B22;
 }
 
 .escolha-tema input[type="radio"]#amarelo {
