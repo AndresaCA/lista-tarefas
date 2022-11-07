@@ -87,21 +87,13 @@ function adicionarTarefa(){
 
 function adicionarTarefaEnter(event) {
     if (event.keyCode == 13) {
-        id++
-    const novaTarefa = document.getElementById('nome-tarefa').value
-    const listaTarefas = localStorage.getItem('lista-tarefas')
-    if(validarTarefa(novaTarefa)){
-        return
+        adicionarTarefa()
+        limparInput()
     }
-    document.querySelector('#lista-tarefas').innerHTML += tarefa(id, novaTarefa)
-    if(listaTarefas){
-        const novaLista = JSON.parse(listaTarefas)
-        novaLista.push(novaTarefa)
-        localStorage.setItem('lista-tarefas', JSON.stringify(novaLista))
-    } else {
-        localStorage.setItem('lista-tarefas', JSON.stringify([novaTarefa]))
-    }
-    }
+}
+
+function limparInput() {
+    document.getElementById("nome-tarefa").value="";
 }
 
 const removerTarefa = (id) => {
