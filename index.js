@@ -25,9 +25,9 @@ document.onload = retirarTema()
 
 /* Adicionar e remover tarefas*/
 let id = 0
-const tarefa = (id, novaTarefa) => `<div>
+const tarefa = (id, novaTarefa) => `<div class="form-group">
 <span>
-<input type="checkbox" onchange="marcarTarefa(${id})"/>
+<input class="checkbox" id="checkbox" type="checkbox" onchange="marcarTarefa(${id})"/>
 <p id='${id}'>${novaTarefa}</p>
 </span>
 <button onclick="removerTarefa(${id})">x</button>
