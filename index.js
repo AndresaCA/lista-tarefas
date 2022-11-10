@@ -83,6 +83,7 @@ function adicionarTarefa(){
     } else {
         localStorage.setItem('lista-tarefas', JSON.stringify([novaTarefa]))
     }
+    limparInput()
 }
 
 function adicionarTarefaEnter(event) {

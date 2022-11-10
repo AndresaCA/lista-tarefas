@@ -244,7 +244,7 @@ body {
 }
 
 .rodape {
-    position: absolute;
+    position: relative;
     bottom: 20px;
 }
 
